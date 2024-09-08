@@ -1,0 +1,190 @@
+@font-face {
+    font-family: Orbitron;
+    src: url("./Orbitron-Medium.ttf");
+}
+@font-face {
+    font-family: Rajdhani;
+    src: url("./Rajdhani-Light.ttf");
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    background: transparent;
+}
+
+/* Use OS default fonts */
+body {
+    font-family: Orbitron, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "liga", "clig", "kern";
+}
+
+.container {
+    /* min-height: 400px; */
+    height: 100%;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    /* min-width: 300px; */
+}
+
+hr {
+    background-color: aqua;
+}
+.main {
+    min-height: 30vh;
+    height: 100%;
+    border: 1px solid grey;
+    background-color: #2e2e2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+#pitch {
+    overflow: hidden;
+}
+header {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: #d4d4d4;
+    border-top: 4px solid #1a9dba;
+    border-bottom: 4px solid #1a9dba;
+}
+
+header h1 {
+    font-size: 60px;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+    opacity: 0.7;
+}
+.btn {
+    background: #9d9d9d;
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.3rem;
+    height: 100%;
+    /* border: none; */
+    /* outline: none; */
+    justify-content: center;
+    outline-offset: 4px;
+    font-family: Orbitron;
+}
+
+.flex-row {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+/* https://codepen.io/ephbaum/pen/MYJNaj */
+.led-box {
+    height: 30px;
+    width: 25%;
+    margin: 10px 0;
+    float: left;
+}
+
+.led-box p {
+    font-size: 12px;
+    text-align: center;
+    margin: 1em;
+}
+
+.led-red {
+    margin: 0 auto;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px;
+    background-color: rgba(48, 48, 48, 0.512);
+}
+
+.led-red.on {
+    background-color: #f00;
+    -webkit-animation: blinkRed 0.05s infinite;
+    -moz-animation: blinkRed 0.05s infinite;
+    -ms-animation: blinkRed 0.05s infinite;
+    -o-animation: blinkRed 0.05s infinite;
+    animation: blinkRed 0.05s infinite;
+}
+
+@-webkit-keyframes blinkRed {
+    from {
+        background-color: #f00;
+    }
+    50% {
+        background-color: #a00;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;
+    }
+    to {
+        background-color: #f00;
+    }
+}
+
+#pitch {
+    width: 240px;
+    color: rgb(44, 255, 51);
+    font-size: 9rem;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: Rajdhani;
+    min-height: 220px;
+}
+
+#flat-indicator {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 28px solid rgb(197, 0, 0);
+    border-bottom: none !important;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px;
+}
+#sharp-indicator {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 28px solid rgb(198, 0, 0);
+    border-top: none !important;
+}
+
+.triangle {
+    opacity: 0.3 !important;
+    /* transition-duration: 0.1s; */
+}
+
+.triangle.on {
+    opacity: 1 !important;
+}
+
+#flat-indicator.triangle.in-tune {
+    opacity: 1;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 28px solid green;
+}
+
+#sharp-indicator.triangle.in-tune {
+    opacity: 1;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 28px solid green;
+}
