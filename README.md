@@ -8,6 +8,8 @@ Digital guitar tuner application built using Electron Forge (Javascript), HTML, 
 - the app should open like the attached screen shot
 - click the `I / O`  button on the app UI to begin using the tuner. 
 
+![image info](./tuner.png)
+
 Useful links
 https://www.electronforge.io
 https://www.npmjs.com/package/pitchfinder
