@@ -4,7 +4,8 @@ Digital guitar tuner application built using Electron Forge (Javascript), HTML, 
 
 ## To Run In Dev Mode ##
 - execute `git clone https://github.com/RL4444/digital-guitar-tuner.git` in a terminal directory that you wish to run the app
-- install dependencies using yarn `yarn install` at the root of the directory
+- install dependencies using `yarn`  or `npm install` at the root of the directory
+- run app using `yarn start` or `npm run start`
 - the app should open like the attached screen shot
 - click the `I / O`  button on the app UI to begin using the tuner. 
 
